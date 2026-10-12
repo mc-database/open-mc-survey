@@ -32,10 +32,6 @@ public final class Config {
         this.configFile = configFile;
     }
 
-    public Path configFile() {
-        return configFile;
-    }
-
     public synchronized void ensureExists() throws IOException {
         if (Files.exists(configFile)) {
             return;
