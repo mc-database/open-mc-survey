@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "openmcsurvey",
+	"version": "${version}",
+	"name": "Open MC Survey",
+	"description": "Anonymous, opt-in usage survey for the Minecraft community",
+	"authors": [
+		"mc-database"
+	],
+	"contact": {
+		"sources": "https://github.com/mc-database/open-mc-survey"
+	},
+	"license": "MIT",
+	"icon": "assets/openmcsurvey/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "org.mcdatabase.openmcsurvey.OpenMCSurvey"
+		]
+	},
+	"mixins": [
+		"openmcsurvey.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "${minecraft_compatible}",
+		"java": ">=${java_version}"
+	}
+}
