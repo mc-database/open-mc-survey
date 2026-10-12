@@ -1,9 +1,3 @@
-# Template Mod
+# Open MC Survey
 
-## Setup
-
-For setup instructions, please see the [Fabric Documentation page](https://docs.fabricmc.net/develop/getting-started/creating-a-project#setting-up) related to the IDE that you are using.
-
-## License
-
-This template is available under the CC0 license. Feel free to learn from it and incorporate it in your own projects.
+Open MC Survey is an opt-in, anonymous mod that tries to make analytics about Minecraft trends public, inspired by the [Steam Hardware Survey](https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam) and [bStats](https://github.com/Bastian/bStats).
