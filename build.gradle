@@ -24,7 +24,6 @@ def replaceProperties = [
 
 processResources {
 	inputs.properties replaceProperties
-	replaceProperties.put 'project', project
 
 	filesMatching("fabric.mod.json") {
 		expand replaceProperties
