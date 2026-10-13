@@ -11,7 +11,7 @@ import java.util.concurrent.Executors;
 public class OpenMCSurvey implements ModInitializer {
 	public static final String MOD_ID = "openmcsurvey";
 
-	private static final String OPENMCDB_URL = "http://0.0.0.0:8000";
+	private static final String OPENMCDB_URL = "https://openmcdb.dpdns.org/";
 	private static final String CONFIG_FILENAME = "openmcsurvey.json";
 
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
