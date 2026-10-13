@@ -1,1 +1,1 @@
-- set openmcdb url to actual deployed url
+- add opt-in / config screen

@@ -1,0 +1,13 @@
+{
+  "openmcsurvey.optin.title": "Help improve Minecraft modding: opt in?",
+  "openmcsurvey.optin.message.prefix": "Open MC Survey collects anonymous stats to publish public trends for the community.\nYour participation is voluntary and would be greatly appreciated.",
+  "openmcsurvey.optin.message.bold": "No personal data is sent.",
+  "openmcsurvey.optin.message.suffix": "You can change your choice anytime.",
+  "openmcsurvey.optin.optin": "Opt in (Thanks!)",
+  "openmcsurvey.config.title": "Open MC Survey settings",
+  "openmcsurvey.config.message.suffix": "Choose whether to take part:",
+  "openmcsurvey.config.status.in": "You are currently opted in.",
+  "openmcsurvey.config.status.out": "You are currently opted out.",
+  "openmcsurvey.config.optin": "Opt in",
+  "openmcsurvey.config.optout": "Opt out"
+}

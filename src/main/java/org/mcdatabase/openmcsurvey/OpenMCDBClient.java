@@ -25,8 +25,8 @@ public final class OpenMCDBClient {
                 .build();
     }
 
-    public void send(Snapshot snapshot) throws IOException, InterruptedException {
-        if (OpenMCSurvey.noUserConsent()) return; // should never trigger here, consent was already checked, but just to make sure
+    public boolean send(Snapshot snapshot) throws IOException, InterruptedException {
+        if (OpenMCSurvey.noUserConsent()) return false; // should never trigger here, consent was already checked, but just to make sure
         HttpRequest request = HttpRequest.newBuilder(submitUri)
                 .timeout(TIMEOUT)
                 .header("Content-Type", "application/json; charset=utf-8")
@@ -38,5 +38,6 @@ public final class OpenMCDBClient {
             throw new IOException("openMCDB submit failed: HTTP " + status + " " + response.body());
         }
         OpenMCSurvey.LOGGER.info("Sent snapshot to openMCDB");
+        return true;
     }
 }

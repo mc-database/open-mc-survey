@@ -20,6 +20,7 @@ public final class Config {
     private static final Gson GSON = new Gson();
 
     public static final String OPT_IN = "optIn";
+    public static final String OPT_IN_ASKED = "optInAsked";
     public static final String FIRST_SENT = "firstSent";
 
     private final Path configFile;
@@ -75,6 +76,14 @@ public final class Config {
 
     public void setOptedIn(boolean value) {
         setBoolean(OPT_IN, value);
+    }
+
+    public boolean wasOptInAsked() {
+        return getBoolean(OPT_IN_ASKED, false);
+    }
+
+    public void markOptInAsked() {
+        setBoolean(OPT_IN_ASKED, true);
     }
 
     public boolean hasSentFirst() {
@@ -162,6 +171,7 @@ public final class Config {
     private static JsonObject defaults() {
         JsonObject root = new JsonObject();
         root.addProperty(OPT_IN, false);
+        root.addProperty(OPT_IN_ASKED, false);
         root.addProperty(FIRST_SENT, false);
         return root;
     }

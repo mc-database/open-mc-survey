@@ -16,6 +16,9 @@
 	"entrypoints": {
 		"main": [
           "org.mcdatabase.openmcsurvey.OpenMCSurvey"
+		],
+		"modmenu": [
+          "org.mcdatabase.openmcsurvey.ModMenuIntegration"
 		]
 	},
 	"mixins": [
