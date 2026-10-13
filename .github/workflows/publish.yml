@@ -47,7 +47,7 @@ jobs:
         if: steps.check-version.outputs.exists != 'true'
         uses: Kira-NT/mc-publish@v3
         with:
-          modrinth-id: open-mc-survey
+          modrinth-id: iJTP6cRD
           modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
 
           github-tag: v${{ steps.version.outputs.version }}
