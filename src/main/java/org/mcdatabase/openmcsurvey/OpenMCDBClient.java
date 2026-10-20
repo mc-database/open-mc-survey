@@ -34,6 +34,14 @@ public final class OpenMCDBClient {
                 .build();
         HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString(StandardCharsets.UTF_8));
         int status = response.statusCode();
+        if (status == 429) {
+            OpenMCSurvey.LOGGER.warn("openMCDB sent 429, retry after {}. not retrying this session",
+                    response.headers()
+                            .firstValue("Retry-After")
+                            .map(value -> value + "s")
+                            .orElse("unknown delay"));
+            return false;
+        }
         if (status < 200 || status >= 300) {
             throw new IOException("openMCDB submit failed: HTTP " + status + " " + response.body());
         }
